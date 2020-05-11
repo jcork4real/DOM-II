@@ -7,7 +7,7 @@
 //  mouseover
 //  keydown
 //  wheel
-//  drag / drop
+//  click
 //  load
 //  focus
 //  resize
@@ -20,14 +20,10 @@
 //  Stop the navigation items from refreshing the page by using preventDefault()
 
 
-
-
-
 // Use 10 unique event listeners
 // 1. Mouseover
 
 let navHomeMouseOver = document.querySelectorAll('.nav-link')[0].addEventListener('mouseover', (e) => {e.target.style.color = 'red';})
-
 
 
 // 2. Keydown
@@ -35,16 +31,13 @@ let navHomeMouseOver = document.querySelectorAll('.nav-link')[0].addEventListene
 let navAboutKeyDown = document.querySelectorAll('.nav-link')[1].addEventListener('keydown', (e) => {e.target.style.color = 'green';})
 
 
-
 // 3. Wheel
 
 let navBlogWheel = document.querySelectorAll('.nav-link')[2].addEventListener('wheel', (e) => {e.target.style.color = 'red';})
 
 
+// 4. click
 
-// 4. drag/drop
-
-
-
+let navContactClick = document.querySelectorAll('.nav-link')[3].addEventListener('click', (e) => {e.target.style.color = 'blue';})
 
 
