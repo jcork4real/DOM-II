@@ -8,12 +8,12 @@
 //  keydown
 //  wheel
 //  click
-//  load
-//  focus
-//  resize
-//  scroll
-//  select
+//  mouseenter
+//  mouseleave
+//  mouseup
 //  dblclick
+//  contextmenu
+//  mouseout
 // Using the 10 unique events, find ways to update the DOM in creative ways. For example you could change colors, animate objects, remove objects, etc.
 
 //  Nest two similar events somewhere in the site and prevent the event propagation properly
@@ -41,3 +41,28 @@ let navBlogWheel = document.querySelectorAll('.nav-link')[2].addEventListener('w
 let navContactClick = document.querySelectorAll('.nav-link')[3].addEventListener('click', (e) => {e.target.style.color = 'blue';})
 
 
+// 5. mouseenter
+
+let welcomeMouseEnter = document.querySelectorAll('p')[0].addEventListener('mouseenter', (e) => {e.target.style.color = 'green';}) 
+
+// 6. mouseleave
+
+let welcomeMouseLeave = document.querySelectorAll('.text-content')[0].addEventListener('mouseleave', (e) => {e.target.style.color = 'green';}) 
+
+// 7. mouseup
+
+let welcomeMouseUp = document.querySelectorAll('.text-content')[1].addEventListener('mouseup', (e) => {e.target.style.color = 'green';}) 
+
+// 8.dblclick
+
+let welcomeDblClick = document.querySelectorAll('.content-destination')[0].addEventListener('dblclick', (e) => {e.target.style.color = 'green';}) 
+
+// 9. contextmenu
+
+
+let welcomeSelect = document.querySelectorAll('h4')[0].addEventListener('contextmenu', (e) => {e.target.style.color = 'red';}) 
+
+
+// 10.  mousout
+
+let welcomeMouseOut = document.querySelectorAll('h4')[1].addEventListener('mouseout', (e) => {e.target.style.color = 'red';}) 
