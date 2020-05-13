@@ -23,7 +23,16 @@
 // Use 10 unique event listeners
 // 1. Mouseover
 
-let navHomeMouseOver = document.querySelectorAll('.nav-link')[0].addEventListener('mouseover', (e) => {e.target.style.color = 'red';})
+
+
+// let navHomeMouseOver = document.querySelectorAll('.nav-link')[0].addEventListener('mouseover', (e) => {e.target.style.color = 'red';})
+
+let navHomeMouseOver = document.querySelectorAll('.nav-link')[0].addEventListener('click', (e) => {e.target.style.color = 'red';
+
+ e.stopPropagation();
+
+})
+
 
 
 // 2. Keydown
@@ -38,7 +47,11 @@ let navBlogWheel = document.querySelectorAll('.nav-link')[2].addEventListener('w
 
 // 4. click
 
-let navContactClick = document.querySelectorAll('.nav-link')[3].addEventListener('click', (e) => {e.target.style.color = 'blue';})
+let navContactClick = document.querySelectorAll('.nav-link')[3].addEventListener('click', (e) => {e.target.style.color = 'blue'
+
+e.stopPropagation();
+
+;})
 
 
 // 5. mouseenter
@@ -57,6 +70,8 @@ let welcomeMouseUp = document.querySelectorAll('.text-content')[1].addEventListe
 
 let welcomeDblClick = document.querySelectorAll('.content-destination')[0].addEventListener('dblclick', (e) => {e.target.style.color = 'green';}) 
 
+
+
 // 9. contextmenu
 
 
@@ -66,3 +81,35 @@ let welcomeSelect = document.querySelectorAll('h4')[0].addEventListener('context
 // 10.  mousout
 
 let welcomeMouseOut = document.querySelectorAll('h4')[1].addEventListener('mouseout', (e) => {e.target.style.color = 'red';}) 
+
+
+
+//Prevent default
+
+  let preventDefault = document.querySelectorAll('.nav-link')[0].addEventListener('click', (e) => {e.preventDefault();})
+
+
+  
+
+
+
+
+//   stop propogation to prevent  changes effecting the parent and children
+
+//make main header black and prevent from bleeding over to children
+// If you have an event of the same type on a parent element and a child element, and you trigger that event on the child element, it will also trigger on the parent. We have to be careful not to create unwanted interactions because of this.
+
+
+
+
+mainNav = document.querySelector('.main-navigation').addEventListener('click', (e) => {e.target.style.background = 'black';
+                                                                                       e.target.stopPropagation();
+
+})
+
+
+
+
+
+
+
